@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderWrapper = styled.div`
   height: 75px;
   color: #fff;
+  font-size: 14px;
   background-color: #242424;
 
   .content{
@@ -12,11 +13,20 @@ export const HeaderWrapper = styled.div`
   }
 
   .divider{
-    height: 5px;
-    background-color: #c20c0c;
+    position: relative;
+    width: 100%;
+    height: 172px;
+    overflow: hidden;
+    border-top: 1px solid #d3d3d3;
+    background: #f2f2f2;
   }
   .wrap-v1{
-    background-color: blue;
+    /* background-color: blue; */
+  }
+  .wrap-v2{
+    width: 980px;
+    margin: 0 auto;
+    position: absolute;
   }
 `
 
@@ -29,24 +39,53 @@ export const HeaderLeft = styled.div`
     width: 177px;
     height: 100%;
     background-position: 0 0;
+    text-indent: -9999px;
   }
 
   .select-list{
     display: flex;
     line-height: 70px;
-    a{
-      padding: 0 20px;
-      height: 70px;
-      text-align: center;
-      font-size: 14px;
-      text-decoration: none;
-    }
 
-    :last-of-type a{
+    .select-item{
       position: relative;
-      ::after{
+      a{
+        display: block;
+        padding: 0 20px;
+        height: 70px;
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+        text-decoration: none;
+      }
+
+      :last-of-type a {
+        position: relative;
+        ::after{
+          position: absolute;
+          display: block;
+          content: "";
+          width: 28px;
+          height: 19px;
+          background-image: url(${require('@/assets/img/sprite_01.png').default});
+          background-position: -190px 0;
+          top: 21px;
+          right: -15px;
+        }
+      }
+      &:hover a, a.active {
+        color: #fff;
+        background: #000;
+        text-decoration: none;
+      }
+      .active .icon{
         position: absolute;
-        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 7px;
+        bottom: -1px;
+        left: 50%;
+        transform: translate(-50%,0);
+        background-position: -226px 0;
       }
     }
   }
@@ -54,5 +93,45 @@ export const HeaderLeft = styled.div`
 
 // 右边
 export const HeaderRight = styled.div`
-  
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+  .search{
+    width: 158px;
+    height: 32px;
+    border-radius: 16px;
+    outline:none;
+    border: 0;
+    input{
+      &::placeholder{
+        font-size: 12px;
+      }
+    }
+  }
+  .author{
+    width: 90px;
+    height: 32px;
+    line-height: 30px;
+    text-align:center;
+    border:1px solid #666;
+    border-radius: 16px;
+    margin: 0 16px;
+    color: #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    :hover{
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+  .login{
+    color: #787878;
+    background-color: transparent;
+    cursor: pointer;
+    :hover{
+      color: #999;
+      text-decoration: underline;
+    }
+  }
 `

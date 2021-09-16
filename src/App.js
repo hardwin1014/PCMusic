@@ -10,11 +10,11 @@ import { HashRouter } from 'react-router-dom'
 
 
 export default memo(function App() {
-    return ( 
-    <HashRouter>
-        <WXHAppHeader/> 
-        { renderRoutes(routes) } 
-        <WXHAppFooter/>
-    </HashRouter>
+    return (
+        <HashRouter>
+            <WXHAppHeader/>
+            { renderRoutes(routes) }
+            <WXHAppFooter/>
+        </HashRouter>
     )
 })
