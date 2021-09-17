@@ -1,7 +1,7 @@
 export const headerLinks = [
   {
     title: "发现音乐",
-    link: "/"
+    link: "/discover"
   },
   {
     title: "我的音乐",
@@ -46,21 +46,28 @@ export const footerLinks = [
   {
     title: "意见反馈",
     link: "#"
+  },
+  {
+    title: "广告合作",
+    link: "#"
   }
 ]
 
 export const footerImages = [
   {
-    link: "https://music.163.com/st/userbasic#/auth"
+    link: "https://web-amped.music.163.com/"
   },
   {
-    link: "https://music.163.com/recruit"
+    link: "//music.163.com/st/userbasic#/auth"
   },
   {
-    link: "https://music.163.com/web/reward"
+    link: "//music.163.com/musician/artist"
   },
   {
-    link: "https://music.163.com/uservideo#/plan"
+    link: "//music.163.com/web/reward"
+  },
+  {
+    link: "//music.163.com/uservideo#/plan"
   }
 ]
 

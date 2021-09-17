@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.div`
-  height: 75px;
+  height: 70px;
   color: #fff;
   font-size: 14px;
   background-color: #242424;
@@ -13,20 +13,11 @@ export const HeaderWrapper = styled.div`
   }
 
   .divider{
-    position: relative;
-    width: 100%;
-    height: 172px;
-    overflow: hidden;
-    border-top: 1px solid #d3d3d3;
-    background: #f2f2f2;
-  }
-  .wrap-v1{
-    /* background-color: blue; */
-  }
-  .wrap-v2{
-    width: 980px;
-    margin: 0 auto;
-    position: absolute;
+    z-index: 90;
+    height: 35px;
+    box-sizing: border-box;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
   }
 `
 
@@ -39,7 +30,7 @@ export const HeaderLeft = styled.div`
     width: 177px;
     height: 100%;
     background-position: 0 0;
-    text-indent: -9999px;
+    text-indent: -9999px; // a标签显示logo 里面写网站标题用seo优化，设置text-indent=-9999px，文字会跑出去
   }
 
   .select-list{

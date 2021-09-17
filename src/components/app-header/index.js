@@ -2,12 +2,12 @@ import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 import { headerLinks } from '@/common/local-data'
 import { SearchOutlined } from '@ant-design/icons'
-import { Input } from 'antd'
+import { Input} from 'antd'
 import {
   HeaderWrapper,
   HeaderLeft,
   HeaderRight
-} from './style'
+} from './style' 
 export default memo(function WXHAppHeader() {
   // 页面代码
   const showSelectItem = (item,index) => {
@@ -26,7 +26,7 @@ export default memo(function WXHAppHeader() {
     <HeaderWrapper>
       <div className="content wrap-v1">
         <HeaderLeft>
-          <a href='#/' className='logo sprite_01'>logo</a>
+          <a href='#/' className='logo sprite_01'>网易云音乐</a>
           <div className="select-list">
               {
                 headerLinks.map((item,index) => {
@@ -44,13 +44,12 @@ export default memo(function WXHAppHeader() {
             className="search" 
             placeholder="音乐/视频/电台/用户" 
             prefix={<SearchOutlined />}
-            blur={e=>this.placeholder = "音乐/视频/电台/用户"}
             />
           <button className='author'>创造者中心</button>
           <button className='login'>登陆</button>
         </HeaderRight>
       </div>
-      <div className="divider wrap-v2"></div>
+      <div className="divider"></div>
     </HeaderWrapper>
   )
 })
